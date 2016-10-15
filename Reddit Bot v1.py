@@ -3,12 +3,12 @@ import praw
 
 r = praw.Reddit('Sound cloud test bot by J_Mallory v 1.0')
 r.set_oauth_app_info(client_id='rPfCPCykpQ5V2w',
-                     client_secret="aTgnyAZ6lLFNZjRV_g76qh4GEaE",
+                     client_secret="",
                      redirect_uri='https//127.0.0.1:65010/authorize_callback')
 existing_posts = []
 
 while True:
-    subreddit = r.get_subreddit('financialindependence')
+    subreddit = r.get_subreddit('financialindependence+personalfinance')
     for submission in subreddit.get_new(limit=10):
         title = submission.title
         print(title)
